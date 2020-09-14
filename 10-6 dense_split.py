@@ -1,0 +1,5 @@
+input1 = Input(shape=(2,))
+output1 = Dense(units=2)(input1)
+input2 = Input(shape=(3,))
+output2 = Dense(units=2, weights=[[1, 1], [1, 1], [1, 1]], trainable=False)(input2)
+output = Add()([output1, output2])

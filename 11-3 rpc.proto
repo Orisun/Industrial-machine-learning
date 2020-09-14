@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message Request {
+    string traceid = 1;
+    int32 uid = 2;
+    int64 request_time = 3;
+    string location = 5; //用户的位置
+}
+message Feature {
+    string traceid = 1;
+    int32 uid = 2;
+    int32 itemid = 3;
+    int64 gen_feature_time = 4; //生成特征的时间
+    int32 gender = 5; //用户的特征，性别
+    int32 price = 6; //物品的特征，价格
+}
